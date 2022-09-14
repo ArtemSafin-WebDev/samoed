@@ -25,6 +25,9 @@ html {
 
     @include noHighlight();
 
+    @media screen and (max-width: 1679px) {
+        font-size: clamp(4.2px, 0.6vw, 10px);
+    }
 
     @include breakpoint(mobile) {
         font-size: 10px;
