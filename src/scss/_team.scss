@@ -1,0 +1,113 @@
+.team {
+    margin-bottom: 16rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3rem;
+    }
+}
+
+.team__row {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-gap: 3rem;
+}
+
+.team__heading {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10rem;
+    line-height: 11.9rem;
+    letter-spacing: -0.02em;
+    grid-column: 1 / 3;
+    margin-top: -1rem;
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        font-size: 4rem;
+        line-height: 1.2;
+        margin-top: 0;
+    }
+}
+
+.team__list {
+    grid-column: 3 / -1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 2.2rem;
+
+    @include breakpoint(mobile) {
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        grid-gap: 1rem;
+    }
+}
+
+.team__list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.team__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    background: #19274d;
+    border-radius: 2rem;
+    color: white;
+    padding: 1rem;
+}
+
+.team__card-image-container {
+    position: relative;
+    border-radius: 1.3rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    margin-bottom: 1.7rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 1rem;
+    }
+    &::before {
+        content: '';
+        display: block;
+        padding-bottom: 100%;
+    }
+}
+
+.team__card-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team__card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    margin-bottom: 0.2rem;
+    text-align: center;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 0.3rem;
+    }
+}
+
+.team__card-role {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1.7rem;
+    color: #6fabf9;
+    text-align: center;
+    margin-bottom: 0.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+}

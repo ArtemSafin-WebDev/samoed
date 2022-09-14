@@ -1,0 +1,186 @@
+.intro {
+    overflow: hidden;
+
+   
+}
+
+.intro__content {
+   
+   
+ 
+    flex-grow: 1;
+    min-height: 100vh;
+
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-gap: 3rem;
+}
+
+.intro__text {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18.6rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    z-index: 3;
+    display: block;
+    text-align: center;
+    padding-top: 14rem;
+    justify-self: center;
+    align-self: flex-start;
+    position: relative;
+
+
+    @include breakpoint(mobile) {
+        font-size: 5rem;
+        line-height: 1;
+    }
+
+    
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 15rem;
+        height: 15rem;
+        transform: translateX(50%) translateY(50%);
+        background-image: url('../img/rotating-text.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+       
+        margin-right: -1rem;
+        animation-name: rotating-text;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-duration: 15s;
+        animation-timing-function: linear;
+
+        @include breakpoint(mobile) {
+            width: 7rem;
+            height: 7rem;
+            margin-right: 0;
+        }
+    }
+}
+
+@keyframes rotating-text {
+    from {
+        transform: translateX(50%) translateY(50%) rotate(0deg);
+    }
+
+    to {
+        transform: translateX(50%) translateY(50%) rotate(360deg);
+    }
+}
+
+.intro__text-gradient {
+    display: block;
+    background-image: url('../img/conic-gradient.jpg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.intro__image-wrapper {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+    align-self: flex-end;
+    justify-self: center;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.intro__image-dog {
+    align-self: center;
+    width: 45rem;
+    height: auto;
+    display: block;
+
+    @include breakpoint(mobile) {
+        width: 80%;
+    }
+}
+
+.intro__image-pattern {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 125.6rem;
+    height: auto;
+    z-index: -1;
+    max-width: none;
+
+    @include breakpoint(mobile) {
+        width: 300%;
+    }
+}
+
+.intro__social-list {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    justify-self: flex-start;
+    align-self: flex-end;
+    z-index: 12;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-gap: 1.1rem;
+    margin-bottom: 2.4rem;
+}
+
+.intro__social-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    display: block;
+    color: #515a6b;
+
+    &:link,
+    &:visited {
+        color: #515a6b;
+    }
+
+
+    @include breakpoint(mobile) {
+        color: white;
+        &:link,
+        &:visited {
+            color: white;
+        }
+    }
+
+    &:hover {
+        color: white;
+    }
+}
+
+.intro__slogan {
+    grid-column: 5 / -1;
+    grid-row: 1 / 2;
+    justify-self: flex-end;
+    align-self: flex-end;
+    margin-bottom: 2.4rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #515a6b;
+    z-index: 10;
+
+    @include breakpoint(mobile) {
+        color: white;
+        display: none;
+    }
+}

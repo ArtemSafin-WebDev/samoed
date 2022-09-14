@@ -1,0 +1,168 @@
+.giveaway {
+    margin-bottom: 18rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 5rem;
+    }
+}
+
+.giveaway__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.giveaway__heading {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.giveaway__prize {
+    text-align: center;
+    align-self: center;
+    position: relative;
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 3.5rem;
+    }
+}
+
+.giveaway__prize-text {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10rem;
+    line-height: 11.9rem;
+    letter-spacing: -0.02em;
+    background-image: url('../img/giveaway-prize-gradient.jpg');
+    background-size: 120% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+
+    @include breakpoint(mobile) {
+        font-size: 4rem;
+        line-height: 1;
+    }
+}
+
+.giveaway__prize-currency {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #6fabf9;
+    margin-top: 1.8rem;
+    margin-left: 0.5rem;
+
+    @include breakpoint(mobile) {
+        position: static;
+        display: inline-block;
+        vertical-align: baseline;
+        margin: 0;
+    }
+}
+
+.giveaway__rules {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 125.8rem;
+    gap: 6rem;
+    display: flex;
+    align-items: flex-start;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 3rem;
+        max-width: none;
+        margin: 0;
+    }
+}
+
+.giveaway__rules-image-container {
+    width: 30.5rem;
+    height: 30.5rem;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    padding: 0.7rem;
+    background: linear-gradient(
+        269.75deg,
+        #5585f1 0.26%,
+        #9192f8 7.99%,
+        #e3d7d0 23.6%,
+        #eba1f9 46.42%,
+        #868cf6 54.23%,
+        #6283f6 67.86%,
+        #9ec4ff 84.48%,
+        #6fabd2 97.86%
+    );
+
+    @include breakpoint(mobile) {
+        width: 22rem;
+        height: 22rem;
+        margin: 0 auto;
+        padding: 0.5rem;
+    }
+    video,
+    img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+    }
+}
+
+.giveaway__rules-content {
+    width: 50%;
+    flex-grow: 1;
+
+    @include breakpoint(mobile) {
+        width: 100%;
+        flex-grow: 0;
+    }
+}
+
+.giveaway__rules-large-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 5rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 2rem;
+    }
+}
+
+.giveaway__rules-small-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+}

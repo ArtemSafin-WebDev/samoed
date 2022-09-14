@@ -1,0 +1,147 @@
+.features {
+    margin-bottom: 10rem;
+
+    @include breakpoint(mobile) {
+        margin-bottom: 4rem;
+    }
+}
+
+.features__top-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-bottom: 4rem;
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: flex-start;
+        gap: 1rem;
+        margin-bottom: 3rem;
+    }
+}
+
+.features__heading {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 10rem;
+    line-height: 11.9rem;
+    letter-spacing: -0.02em;
+
+    @include breakpoint(mobile) {
+        font-size: 4rem;
+        line-height: 1.2;
+    }
+}
+
+.features__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #6fabf9;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}
+
+.features__list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-gap: 3rem;
+
+    @include breakpoint(mobile) {
+        grid-template-columns: minmax(0, 1fr);
+        grid-gap: 2rem;
+    }
+}
+
+.features__list-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.features__card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 3.2rem 3.8rem;
+    padding-bottom: 5.6rem;
+
+    color: #fff;
+    background: #121621;
+    background-clip: padding-box; /* !importanté */
+    border: solid 0.2rem transparent; /* !importanté */
+    border-radius: 0.4rem;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        padding: 2rem;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -0.2rem; /* !importanté */
+        border-radius: inherit; /* !importanté */
+        background: linear-gradient(
+            269.75deg,
+            #5585f1 0.26%,
+            #9192f8 7.99%,
+            #e3d7d0 23.6%,
+            #eba1f9 46.42%,
+            #868cf6 54.23%,
+            #6283f6 67.86%,
+            #9ec4ff 84.48%,
+            #6fabd2 97.86%
+        );
+    }
+}
+
+.features__card-icon {
+    width: 4rem;
+    height: 4rem;
+    object-fit: contain;
+    margin-bottom: 6rem;
+
+    @include breakpoint(mobile) {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-bottom: 1.8rem;
+    }
+}
+
+.features__card-title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    margin-bottom: 2rem;
+    max-width: 36rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+}
+
+.features__card-text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.2rem;
+        line-height: 1.2;
+    }
+}

@@ -1,0 +1,30 @@
+.ticker {
+    position: relative;
+}
+
+.ticker__track {
+    display: flex;
+    align-items: center;
+}
+
+.ticker__inner-track {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.ticker__item {
+    white-space: nowrap;
+    flex-shrink: 0;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16rem;
+    line-height: 1;
+    letter-spacing: 0.01em;
+
+    @include breakpoint(mobile) {
+        font-size: 7rem;
+        line-height: 1;
+    }
+}

@@ -1,0 +1,97 @@
+.video {
+    display: block;
+}
+
+.video__link {
+    display: block;
+    position: relative;
+}
+
+.video__preview-wrapper {
+    display: block;
+    position: relative;
+
+    @include breakpoint(mobile) {
+        &::before {
+            content: '';
+            display: block;
+            padding-bottom: 56.25%;
+        }
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(0deg, rgba(18, 22, 33, 0.42), rgba(18, 22, 33, 0.42));
+    }
+}
+
+.video__preview-image {
+    display: block;
+    width: 100%;
+    height: auto;
+
+    @include breakpoint(mobile) {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.video__controls {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    left: 0;
+    z-index: 10;
+}
+
+.video__controls-inner {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+.video__play {
+    display: inline-flex;
+    align-items: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 3rem;
+    gap: 1.3rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.8rem;
+        line-height: 1.2;
+        gap: 1rem;
+    }
+    svg {
+        width: 4.4rem;
+        height: 4.4rem;
+        fill: currentColor;
+        flex-shrink: 0;
+
+        @include breakpoint(mobile) {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
+
+.video__duration {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+
+    @include breakpoint(mobile) {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+}
