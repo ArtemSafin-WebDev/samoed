@@ -25,12 +25,20 @@ html {
 
     @include noHighlight();
 
-    @media screen and (max-width: 1679px) {
+    @media (max-width: 1679px) {
         font-size: clamp(4.2px, 0.6vw, 10px);
+    }
+
+    @media (min-width: 1921px) {
+        font-size: clamp(4.2px, 0.52vw, 25px);
     }
 
     @include breakpoint(mobile) {
         font-size: 10px;
+    }
+
+    @include breakpoint(supersmall-mobile) {
+        font-size: 9px;
     }
 }
 

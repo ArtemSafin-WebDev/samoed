@@ -12,6 +12,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import fancybox from './fancybox';
 import ticker from './ticker';
+import roadmap from './roadmap';
+import clientHeight from './clientHeight';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -19,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     detectTouch();
     setScrollbarWidth();
     masks();
+    clientHeight();
     validation();
     anchorLinks();
     accordions();
@@ -27,6 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
     menu();
     fancybox();
     ticker();
+    roadmap();
 });
 
 document.addEventListener('lazyloaded', () => {
